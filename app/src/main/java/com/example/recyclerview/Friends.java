@@ -13,7 +13,7 @@ public class Friends {
         this.name = name;
         this.dob = dob;
         this.city = city;
-        this.imageID = imageID;
+        this.imageID = imageId;
     }
     public int getId() {   return id;}
     public void setId(int id) { this.id = id;}
