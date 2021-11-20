@@ -29,12 +29,16 @@ public class myRecyclerViewAdapter extends RecyclerView.Adapter<myRecyclerViewAd
 
     @Override
     public void onBindViewHolder(@NonNull myRecyclerViewAdapter.MyViewHolder holder, int position) {
-
+        holder.data=friendlist.get(position);
+        holder.textViewFriendName.setText(holder.data.getName());
+        holder.textViewDateFriend.setText(String.valueOf(holder.data.getDob()));
+        holder.imageViewFriend.setImageResource(holder.data.getImageId());
+        holder.textViewCity.setText(holder.data.getCity());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return friendlist.size();
     }
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
